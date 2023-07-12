@@ -1,8 +1,8 @@
 // ## Value Object
 /**
- * O endereço neste caso é um objeto de valor que tem as 
- * próprias validações, os prórpios metódos especiais e ele 
- * representa alguma coisa para o sistema, não é apenas um tipo genérico  
+ * O endereço neste caso é um objeto de valor que tem as
+ * próprias validações, os prórpios metódos especiais e ele
+ * representa alguma coisa para o sistema, não é apenas um tipo genérico
  */
 
 export default class Address {
@@ -18,6 +18,22 @@ export default class Address {
     this._city = city;
 
     this.validate();
+  }
+
+  get street(): string {
+    return this._street;
+  }
+
+  get number(): number {
+    return this._number;
+  }
+
+  get zip(): string {
+    return this._zip;
+  }
+
+  get city(): string {
+    return this._city;
   }
 
   validate() {

@@ -43,6 +43,11 @@ export default class Customer {
     this.validate();
   }
 
+  changeAddress(address: Address) {
+    this._address = address;
+    this.validate();
+  }
+
   get address(): Address {
     return this._address;
   }
